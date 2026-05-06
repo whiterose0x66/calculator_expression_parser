@@ -36,3 +36,12 @@ The tokenizer extracts tokens from the input string, ignores spaces, and separat
 ```txt
 Input:  (12+3)*4
 Tokens: [ ( 12 + 3 ) * 4 ]
+
+### 2. Infix to Postfix Translator
+
+This step converts the infix expression into postfix notation (Reverse Polish Notation) using a stack and operator precedence rules.
+
+#### Operator precedence:
+- `*` `/` → higher priority
+- `+` `-` → lower priority
+- `(` `)` → control flow
