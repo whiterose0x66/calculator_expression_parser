@@ -36,6 +36,7 @@ The tokenizer extracts tokens from the input string, ignores spaces, and separat
 ```txt
 Input:  (12+3)*4
 Tokens: [ ( 12 + 3 ) * 4 ]
+```
 
 ### 2. Infix to Postfix Translator
 
@@ -45,3 +46,24 @@ This step converts the infix expression into postfix notation (Reverse Polish No
 - `*` `/` → higher priority
 - `+` `-` → lower priority
 - `(` `)` → control flow
+
+### Why postfix notation?
+
+Postfix expressions are:
+- Easier to evaluate
+- Free of parentheses
+- Common in compilers and virtual machines
+
+### Example:
+```txt
+Input:  [ ( 12 + 3 ) * 4 ]
+postfix: [12 3 + 4 *]
+```
+
+### 3. Postfix Evaluation
+
+The postfix expression is evaluated using a stack:
+
+#### Rules:
+- If token is a number → push it to stack
+- If token is an operator → pop two values, apply operation, push result
